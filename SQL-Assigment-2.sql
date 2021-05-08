@@ -28,9 +28,8 @@ FROM albums
 GROUP BY albums.Title
 ORDER BY MIN(tracks.Milliseconds) DESC;
 
---Find the total duration of each album. Your solution should include track name, album id, album title and its total duration sorted from highest to lowest.
+--Find the total duration of each album. Your solution should include album id, album title and its total duration sorted from highest to lowest.
 SELECT
-	tracks.Name,
 	albums.AlbumId,
 	albums.title,
 	SUM(tracks.Milliseconds) as sum_of_albums
